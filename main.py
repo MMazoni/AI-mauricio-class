@@ -7,7 +7,7 @@ if __name__ == '__main__':
     limiar = 1.5
     x1 = [0, 0, 1, 1]
     x2 = [0, 1, 0, 1]
-    ld = Degrau(w1, w2, limiar, x1, x2)
+    ld = Degrau(w1, w2, limiar)
     for i in range(4):
-        y = ld.verifica_degrau(x1[i], x2[i], ld.weight1, ld.weight2)
-        print("porta E: F = (x1 = {}) E (x2 = {}) = {}".format(ld.x1[i],ld.x2[i],y))
+        y = ld.degrau(x1[i], x2[i])
+        print("porta E: F = (x1 = {}) E (x2 = {}) = {}".format(x1[i],x2[i],y))
